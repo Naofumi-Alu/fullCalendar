@@ -2,7 +2,7 @@
 // Conexion a la base de datos
 require_once('bdd.php');
 
-/*
+
 if (isset($_POST['delete']) && isset($_POST['id'])){
 	
 	
@@ -20,7 +20,7 @@ if (isset($_POST['delete']) && isset($_POST['id'])){
 	 die ('Erreur execute');
 	}
 	
-}else */ if (isset($_POST['title']) && isset($_POST['color']) && isset($_POST['id'])){
+}else if (isset($_POST['title']) && isset($_POST['color']) && isset($_POST['id'])){
 	
 	$id = $_POST['id'];
 	$title = $_POST['title'];

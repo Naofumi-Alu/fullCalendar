@@ -140,13 +140,13 @@ $events = $req->fetchAll();
                         <div class="form-group">
                             <label for="start" class="col-sm-2 control-label">Fecha Inicial</label>
                             <div class="col-sm-10">
-                                <input type="text" name="start" class="form-control" id="start" readonly>
+                                <input type="text" name="start" class="form-control" id="start" placeholder="ingrese la Fecha inicial por: yyyy-mm-dd" >
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="end" class="col-sm-2 control-label">Fecha Final</label>
                             <div class="col-sm-10">
-                                <input type="text" name="end" class="form-control" id="end" readonly>
+                                <input type="text" name="end" class="form-control" id="end" placeholder="ingrese la Fecha final por: yyyy-mm-dd">
                             </div>
                         </div>
 
@@ -168,7 +168,7 @@ $events = $req->fetchAll();
     <!--Update table Events -->
 
 
-    <div class="" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
 
@@ -211,7 +211,7 @@ $events = $req->fetchAll();
                             </div>
                         </div>
 
-                        <input type="hidden" name="id" class="form-control" id="id">
+                        <input type="text" name="id" class="form-control" id="id">
 
 
                     </div>
@@ -241,6 +241,11 @@ $events = $req->fetchAll();
 
 
     <script>
+
+    var Fullcalendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth'
+    });
+
     $(document).ready(function() {
 
         var date = new Date();
@@ -250,7 +255,7 @@ $events = $req->fetchAll();
         var dd = (date.getDate()).toString().length == 1 ? "0" + (date.getDate()).toString() : (date.getDate())
             .toString();
 
-        $('#ModalAdd').fullCalendar({
+        $('#ModalAdd').Fullcalendar({
             header: {
                 language: 'es',
                 left: 'prev,next today',

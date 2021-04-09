@@ -3,10 +3,17 @@
 // Conexion a la base de datos
 require_once('bdd.php');
 
+//Formatea las fechas start y end entrantes por POST
+
+//date_format ($_POST['start'] , 'YYYY-MM-DD HH:mm:ss' );
+
+//date_format ($_POST['end'] , 'YYYY-MM-DD HH:mm:ss' );
+
+
 if (isset($_POST['title']) && isset($_POST['start']) && isset($_POST['end']) && isset($_POST['color'])){
 	
 	$title = $_POST['title'];
-	$start = $_POST['start'];
+	$start = $_POST['start'] ;
 	$end = $_POST['end'];
 	$color = $_POST['color'];
 
