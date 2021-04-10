@@ -27,6 +27,9 @@ El proyecyo consta de:
 9 Honestamente no se que sera la carpeta fonts
 
 
+10 para la creacion de la Base de Datos de My sql Copiar el codigo del archivo  calendar.sql y pegarlo en la linea de comandos de sql de localhost/phpmyadmin para crear la base de datos de este proyecto
+
+Nota: Para que funcione no cambiar nada dejar tal como esta a menos que sepa lo que esta haciendo jeje
 
 
 

@@ -6,6 +6,10 @@
 -- Tiempo de generación: 01-08-2017 a las 06:22:51
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 7.0.13
+
+CREATE DATABASE calendar;
+USE calendar;
+
 SET
   SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 
