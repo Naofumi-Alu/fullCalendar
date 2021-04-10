@@ -122,7 +122,7 @@
 
                 <!--usar  en action editEventDate.php o editEventTitle.php -->
 
-                <form class="form-horizontal" method="POST" action="editEventDate.php">
+                <form class="form-horizontal" method="POST" action="editEventTitle.php">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">Modificar Evento</h4>
