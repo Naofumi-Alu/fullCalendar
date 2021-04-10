@@ -114,7 +114,7 @@ $events = $req->fetchAll();
             Event[2] = end;
 
             $.ajax({
-                url: 'editEventDate.php',
+                url: './editEventDate.php',
                 type: "POST",
                 data: {
                     Event: Event

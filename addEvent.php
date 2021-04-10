@@ -9,6 +9,7 @@ require_once('bdd.php');
 
 //date_format ($_POST['end'] , 'YYYY-MM-DD HH:mm:ss' );
 
+//format('YYYY-MM-DD HH:mm:ss');
 
 if (isset($_POST['title']) && isset($_POST['start']) && isset($_POST['end']) && isset($_POST['color'])){
 	
