@@ -2,16 +2,13 @@
 // Conexion a la base de datos
 require_once('bdd.php');
 
-//Borra la cita
 
-if (isset($_POST['delete']) && isset($_POST['fecha']) && isset($_POST['tipoCita'])) {
+if (isset($_POST['delete']) && isset($_POST['id'])) {
 
 
-	$fecha = $_POST['fecha'];
-	$tipoCita = $_POST['tipoCita'];
+	$id = $_POST['id'];
 
-	$sql = "DELETE FROM events WHERE fecha = '$fecha' and tipoCita ='$tipoCita' ";
-
+	$sql = "DELETE FROM events WHERE id = '$id' ";
 	$query = $bdd->prepare($sql);
 	if ($query == false) {
 		print_r($bdd->errorInfo());
@@ -22,14 +19,13 @@ if (isset($_POST['delete']) && isset($_POST['fecha']) && isset($_POST['tipoCita'
 		print_r($query->errorInfo());
 		die('Erreur execute');
 	}
+} else if (isset($_POST['title']) && isset($_POST['color']) && isset($_POST['id'])) {
 
-// Modifica la Cita solamente	
-} else if (isset($_POST['tipoCita']) && isset($_POST['fecha'])) {
+	$id = $_POST['id'];
+	$title = $_POST['title'];
+	$color = $_POST['color'];
 
-	$tipoCita = $_POST['tipoCita'];
-	$fecha = $_POST['fecha'];
-
-	$sql = "UPDATE events SET  tipoCita = '$tipoCita', fecha = '$fecha' WHERE id = '$id' ";
+	$sql = "UPDATE events SET  title = '$title', color = '$color' WHERE id = '$id' ";
 
 
 	$query = $bdd->prepare($sql);

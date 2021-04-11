@@ -11,13 +11,14 @@ require_once('bdd.php');
 
 //format('YYYY-MM-DD HH:mm:ss');
 
-if (isset($_POST['estado']) && isset($_POST['fecha']) && isset($_POST['tipoCita'])){
+if (isset($_POST['title']) && isset($_POST['start']) && isset($_POST['end']) && isset($_POST['color'])){
 	
-	$estado = $_POST['estado'];
-	$fecha = $_POST['fecha'] ;
-	$tipoCita = $_POST['tipoCita'];
+	$title = $_POST['title'];
+	$start = $_POST['start'] ;
+	$end = $_POST['end'];
+	$color = $_POST['color'];
 
-	$sql = "INSERT INTO events(estado, fecha, TipoCita) values ('$estado', '$fecha', '$tipoCita')";
+	$sql = "INSERT INTO events(title, start, end, color) values ('$title', '$start', '$end', '$color')";
 	
 	echo $sql;
 	
